@@ -1,9 +1,11 @@
 version: '2'
 services:
   rest-api:
-    image: "financeapi_rest-api"
+    image: "polarflare/finance-api"
     ports:
      - "5000:5000"
+    environment:
+     - ENV_NAME=prod
   mongo:
     image: "mongo"
     volumes:
